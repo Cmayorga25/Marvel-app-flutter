@@ -8,12 +8,6 @@ class HeroDetalle extends StatefulWidget {
 
 class _HeroDetalle extends State<HeroDetalle> {
   @override
-  // Widget build(BuildContext context) {
-  //   final Recipe hero = ModalRoute.of(context).settings.arguments;
-  //   print(hero);
-  //   return Scaffold();
-  // }
-
   Widget build(BuildContext context) {
     final Recipe hero = ModalRoute.of(context).settings.arguments;
     print(hero);
@@ -78,11 +72,6 @@ class _HeroDetalle extends State<HeroDetalle> {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Text(hero.description,
-              //     style: Theme.of(context).textTheme.subtitle1,
-              //     // overflow: TextOverflow.ellipsis,
-              //     textAlign: TextAlign.left),
-
               Column(
                 children: [
                   SizedBox(width: 7),
@@ -119,15 +108,6 @@ class _HeroDetalle extends State<HeroDetalle> {
                   ),
                 ],
               ),
-
-              // Row(
-              //   children: [
-              //     Icon(Icons.star_border),
-              //     Text(hero.voteAverage.toString(),
-              //        style: Theme.of(context).textTheme.subtitle1,
-              //     )
-              //   ],
-              // )
             ],
           ))
         ],

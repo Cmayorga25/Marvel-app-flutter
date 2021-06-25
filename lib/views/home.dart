@@ -31,31 +31,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: NavBar(),
-        appBar: AppBar(
-            // title: Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     Icon(Icons.data_usage_outlined),
-            //     SizedBox(width: 10),
-            //     Text('Héroes'),
-            //   ],
-            // ),
-            title: Text('Héroes'),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.search),
-                onPressed: () {
-                  showSearch(context: context, delegate: DataDelegate());
-                },
-              )
-            ]),
+        appBar: AppBar(title: Text('Héroes'), actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              showSearch(context: context, delegate: DataDelegate());
+            },
+          )
+        ]),
         body: _isLoading
             ? Center(child: CircularProgressIndicator())
             : ListView.builder(
                 itemCount: _recipes.length,
                 itemBuilder: (context, index) {
                   return RecipeCard(hero: _recipes[index]);
-                  // thumbnailUrl: _recipes[index].images);
                 },
               ));
   }
